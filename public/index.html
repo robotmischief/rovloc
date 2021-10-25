@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <meta name="description" content="Get the Time, Weather and position of Martian Rovers">
+    <meta name="author" content="robotmischief">
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta name="theme-color" content="#e7a14a"/>
+    <link rel="apple-touch-icon" href="images/icons/apple-icon-180x180.png">
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/webgl.js"></script>
+    <link rel="stylesheet" href="css/webgl.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/time.js"></script>
+    <title>RovLoc</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="place">
+        <div class="text-rover"></div>
+        <div class="text-location">MARS<span class="location-type"></span></div>
+        <div class="text-season hide"></div>
+      </div>
+      <div class="time">
+        <div class="text-sol"></div>
+        <div id="time" class="text-time"><span></span></div>
+      </div>
+      <section class="weather hide">
+        <!-- inSight -->
+        <div id="insight-wd">
+          <div class="temperature">
+            <img src="images/icon_weather_sunny.svg" alt="temperature" />
+            <div class="high-low-temp">
+              <div class="high-temp">-4º<span>C</span></div>
+              <div class="low-temp">-95º<span>C</span></div>
+            </div>
+          </div>
+          <div class="date">Sol 681 / Oct. 25, 2020</div>
+          <div class="sun">
+            <div class="sunrise">
+              <img src="images/icon_sunrise.svg" alt="sunrise" />
+              <span data-sunrise>06:008</span>
+            </div>
+            <div class="sunset">
+              <img src="images/icon_sunset.svg" alt="sunset" />
+              <span data-sunset>18:36</span>
+            </div>
+          </div>
+          <div class="message">Data Temporarily suspended</div>
+        </div>
+        <!-- curiosity -->
+        <div id="curiosity-wd">
+          <div class="temperature">
+            <img src="images/icon_weather_sunny.svg" alt="temperature" />
+            <div class="high-low-temp">
+              <div class="high-temp">-4º<span>C</span></div>
+              <div class="low-temp">-99º<span>C</span></div>
+              <div class="opacity">sunny</div>
+            </div>
+          </div>
+          <div class="date">Sol 3073 / Mar. 29, 2021</div>
+          <div class="sun">
+            <div class="sunrise">
+              <img src="images/icon_sunrise.svg" alt="sunrise" />
+              <span data-sunrise>06:36</span>
+            </div>
+            <div class="sunset">
+              <img src="images/icon_sunset.svg" alt="sunset" />
+              <span data-sunset>18:36</span>
+            </div>
+          </div>
+        </div>
+        <!-- perseverance -->
+        <div id="perseverance-wd">
+          <div class="temperature">
+            <img src="images/icon_weather_sunny.svg" alt="temperature" />
+            <div class="high-low-temp">
+              <div class="high-temp">-4º<span>C</span></div>
+              <div class="low-temp">-99º<span>C</span></div>
+            </div>
+          </div>
+          <div class="date">Sol 3073 / Mar. 29, 2021</div>
+          <div class="sun">
+            <div class="sunrise">
+              <img src="images/icon_sunrise.svg" alt="sunrise" />
+              <span data-sunrise>06:36</span>
+            </div>
+            <div class="sunset">
+              <img src="images/icon_sunset.svg" alt="sunset" />
+              <span data-sunset>18:36</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Mars Planet -->
+    <div class="mars-container">
+      <div id="mars"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="nav-bar-config">
+      <div class="btn-config">
+        <img src="images/icon_config.svg" alt="config button" />
+      </div>
+      <!-- config UI -->
+      <div class="config-hud-container">
+        <div class="config-hud-content">
+          <div class="unit-selector">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <div class="selector-text">Preferred Unit</div>
+          </div>
+          <div class="credits">
+            <div class="selector-text">
+              Weather data from Mars thanks to <a href="https://www.jpl.nasa.gov/news/nasas-first-weather-report-from-jezero-crater-on-mars" target="_blank">Nasa/JPL</a> and El <a href="https://cab.inta-csic.es/noticias/meda-envia-el-primer-informe-meteorologico-desde-el-crater-jezero-en-marte/07/" target="_blank">CAB Astrobiology Center,</a> Spain. Follow these links to learn cool stuff about the missions.
+            </div>
+          </div>
+          <div class="feedback">
+              <div class="selector-text small">
+                Feedback & comments<BR>always welcome!<BR><a href="https://forms.gle/Fhgr5WmXUt7n2kTm6" target="_blank">> here</a>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main nav button -->
+    <div class="nav-bar-container">
+      <div class="btn main" id="main-button">
+        <img src="images/icon_mars.svg" alt="main button" />
+      </div>
+      <div class="btn secondary" id="rover1">
+        <img src="images/icon_sojourner.svg" alt="sojourner button" />
+      </div>
+      <div class="btn secondary" id="rover2">
+        <img src="images/icon_opportunity.svg" alt="opportunity button" />
+      </div>
+      <div class="btn secondary" id="rover3">
+        <img src="images/icon_spirit.svg" alt="spirit button" />
+      </div>
+      <div class="btn secondary" id="rover4">
+        <img src="images/icon_insight.svg" alt="insight button" />
+      </div>
+      <div class="btn secondary" id="rover5">
+        <img src="images/icon_curiosity.svg" alt="curiosity button" />
+      </div>
+      <div class="btn secondary" id="rover6">
+        <img src="images/icon_perseverance.svg" alt="perseverance button  " />
+      </div>
+      <div class="btn secondary" id="rover7">
+        <img src="images/icon_ingenuity.svg" alt="ingenuity button" />
+      </div>
+    </div>
+
+    <!-- service worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "id": "2925",
+    "terrestrial_date": "2021-03-29",
+    "sol": "3073",
+    "ls": "23",
+    "season": "Month 1",
+    "min_temp": "-73",
+    "max_temp": "-20",
+    "pressure": "846",
+    "pressure_string": "Higher",
+    "abs_humidity": "--",
+    "wind_speed": "--",
+    "wind_direction": "--",
+    "atmo_opacity": "Sunny",
+    "sunrise": "06:27",
+    "sunset": "18:21",
+    "local_uv_irradiance_index": "Moderate",
+    "min_gts_temp": "-85",
+    "max_gts_temp": "7"
+}

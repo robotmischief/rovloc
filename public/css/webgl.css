@@ -1,0 +1,39 @@
+/* custom styles for webgl earth */
+.we-pp-wrapper {
+  background-color: var(--nav-color);
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+.we-pp-tip {
+  background-color: var(--nav-color);
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+.we-pp-close {
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.popup-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.popup-bold {
+  margin-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.popup-text {
+  font-weight: 300;
+}
+
+.popup-link a {
+  color: black;
+  text-decoration: underline;
+}

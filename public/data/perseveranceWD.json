@@ -1,0 +1,15 @@
+{
+    "sols": [
+        {
+            "terrestrial_date": "2021-04-01", 
+            "sol": "41", 
+            "ls": "25", 
+            "season": "early spring", 
+            "min_temp": -83.8, 
+            "max_temp": -21.6, 
+            "pressure": 743.2, 
+            "sunrise": "06:09:02", 
+            "sunset": "18:37:53"
+        }, 
+        {
+            "terrestrial_date": "2021-04-02", "sol": "42", "ls": "26", "season": "early spring", "min_temp": -83.0, "max_temp": -26.7, "pressure": 744.7, "sunrise": "06:08:25", "sunset": "18:37:47"}, {"terrestrial_date": "2021-04-03", "sol": "43", "ls": "26", "season": "early spring", "min_temp": -83.5, "max_temp": -27.6, "pressure": 746.8, "sunrise": "06:07:47", "sunset": "18:37:40"}, {"terrestrial_date": "2021-04-04", "sol": "44", "ls": "27", "season": "early spring", "min_temp": -82.2, "max_temp": -21.1, "pressure": 746.0, "sunrise": "06:07:09", "sunset": "18:37:34"}, {"terrestrial_date": "2021-04-05", "sol": "45", "ls": "27", "season": "early spring", "min_temp": -83.1, "max_temp": -22.0, "pressure": 745.9, "sunrise": "06:06:32", "sunset": "18:37:27"}, {"terrestrial_date": "2021-04-06", "sol": "46", "ls": "28", "season": "early spring", "min_temp": -83.0, "max_temp": -24.2, "pressure": 746.9, "sunrise": "06:05:54", "sunset": "18:37:20"}, {"terrestrial_date": "2021-04-07", "sol": "47", "ls": "28", "season": "early spring", "min_temp": -82.9, "max_temp": -22.3, "pressure": 747.1, "sunrise": "06:05:17", "sunset": "18:37:14"}]}
