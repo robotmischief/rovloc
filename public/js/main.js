@@ -164,7 +164,7 @@ const roversPopUps = [
         'landing_date' : 'February 18, 2021',
         'end_mission_date' : 'Still Operating',
         'weight' : '1.8 kg / 4 lb',
-        'rovered' : '2.83 km / 24 min 29 sec',
+        'rovered' : '3.65 km / 26 min 1 sec',
         'mission_link' : 'https://mars.nasa.gov/technology/helicopter/'
     },
 ];

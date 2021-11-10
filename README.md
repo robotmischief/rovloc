@@ -1,5 +1,5 @@
 ![roverlocator header](readme_img/header.png)
-**RoverLocator**<br>
+
 Get the local time and weather, when available, for Rovers on Mars!
 
 Below you can check a screen recording of the UX:
